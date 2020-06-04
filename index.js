@@ -2,7 +2,6 @@ const express = require("express");
 const multer = require("multer");
 const ejs = require("ejs");
 const path = require("path");
-const mongoose = require("mongoose");
 
 //storage
 const storage = multer.diskStorage({
@@ -83,7 +82,7 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(express.static(path.join(__dirname, "public")));
 
-//member api router
+//api router
 app.use("/api/members", require("./routes/api/members"));
 
 app.use("/api/practice", require("./routes/api/practice"));
