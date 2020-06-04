@@ -88,7 +88,7 @@ app.use("/api/members", require("./routes/api/members"));
 
 app.use("/api/practice", require("./routes/api/practice"));
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT;
 
 async function start() {
   try {
