@@ -90,19 +90,4 @@ app.use("/api/practice", require("./routes/api/practice"));
 
 const PORT = process.env.PORT || 5000;
 
-async function start() {
-  try {
-    await mongoose.connect(
-      "mongodb+srv://jomopel:jomopel@lsk-express-i2cou.mongodb.net/<dbname>?retryWrites=true&w=majority",
-      {
-        useNewUrlParser: true,
-        useFindAndModify: false,
-      }
-    );
-    app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
-  } catch (e) {
-    console.log(e);
-  }
-}
-
-start();
+app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
